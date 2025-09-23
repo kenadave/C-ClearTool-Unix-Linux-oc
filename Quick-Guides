@@ -33,3 +33,5 @@ cleartool lsco -cvi -r -s
 
 to add print statement in each case where the method contains switch
 sed -i '/^void method_name(/,/^}$/s/case \([^:]*\):/case \1:\n    printf("Case \1 executed\\n");/' IAPD106.c
+
+(gdb) print (char*)PQresultErrorField(res, 67)
