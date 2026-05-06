@@ -18,3 +18,9 @@
 5) To select a project
    oc project <namespace>
    oc project rac-racrisiapw-dev
+
+6) git branch -a --contains 00616ab745424d97b9f860cd4fcc41429c3c76ee
+
+7)  oc get istag iap:V1.0.1.16 -n rac-racrisiapw-si -o jsonpath='{.image.dockerImageMetadata.Config.Labels}'
+
+8) ./oc get pipelineruns -n rac-racrisiapw-si -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.spec.params}{"\n"}{end}' | grep -i "1.0.1.16\|00616ab\|1341863"
