@@ -35,3 +35,14 @@ to add print statement in each case where the method contains switch
 sed -i '/^void method_name(/,/^}$/s/case \([^:]*\):/case \1:\n    printf("Case \1 executed\\n");/' IAPD106.c
 
 (gdb) print (char*)PQresultErrorField(res, 67)
+
+
+507779@XBLRODCB00417 MINGW64 ~/git/B-1264251-certi-renewal/interline-payables-web/iac/aws/acm-sm (B-1486662-certi-renew)
+$ winpty openssl pkcs12 -in iap-prd-aws.delta.com.pfx -nokeys -out cert_temp.txt
+Enter Import Password:
+
+507779@XBLRODCB00417 MINGW64 ~/git/B-1264251-certi-renewal/interline-payables-web/iac/aws/acm-sm (B-1486662-certi-renew)
+$ winpty openssl x509 -in cert_temp.txt -noout -dates
+notBefore=Sep 29 00:00:00 2026 GMT
+notAfter=Apr 15 23:59:59 2027 GMT
+
